@@ -1,4 +1,3 @@
-// https://dev.to/wizdomtek/typescript-express-building-robust-apis-with-nodejs-1fln
 
 import express, { Request, Response } from 'express';
 
@@ -31,7 +30,9 @@ app.listen(port, () => {
 
 const mockRes = (myId: string) : Promise<any> => {
     return new Promise((resolve, reject)=> {
-        setTimeout(()=> resolve({id : myId, record : "asdf"}), 4000)
+        setTimeout(()=> resolve({id : myId, record : "asdf"}), 2000)
     });
 
 }
+
+export default app;
