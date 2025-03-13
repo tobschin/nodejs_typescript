@@ -1,5 +1,6 @@
 
 import express, { Request, Response } from 'express';
+import {mockRes} from './service/mockService';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -28,11 +29,6 @@ app.listen(port, () => {
 });
 
 
-const mockRes = (myId: string) : Promise<any> => {
-    return new Promise((resolve, reject)=> {
-        setTimeout(()=> resolve({id : myId, record : "asdf"}), 2000)
-    });
 
-}
 
 export default app;
