@@ -21,7 +21,7 @@ app.get('/:id', async (req: Request, res : Response) => {
     let myId = req.params.id
     let result = await mockRes(myId);
 
-    res.json({ id : myId})
+    res.json(result)
 })
 
 app.listen(port, () => {
